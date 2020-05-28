@@ -22,7 +22,7 @@ class Login extends Component<HelloProps, {}> {
 
   componentDidMount(): void {
     this.props.dispatch({
-      type: 'app/a',
+      type: 'user/login',
       payload: {
         name: 'daCai'
       },
@@ -92,4 +92,4 @@ class Login extends Component<HelloProps, {}> {
   }
 }
 
-export default connect((state: any) => ({ ...state.app }))(Login);
+export default connect((state: any) => ({ ...state.user }))(Login);
